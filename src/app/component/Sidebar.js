@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-const Sidebar = ({team}) => {
+const Sidebar = ({teamName}) => {
 
     return (
         <div>
             <ul>
-                {team?.map((team,key)=>(
-                    <li key={key}>{team.team.name}</li>
+                {teamName?.map((team,key)=>(
+                    <li key={key}>{team}</li>
                 ))}
             </ul>
         </div>
