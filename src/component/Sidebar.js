@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Sidebar = ({teamName}) => {
-
+    teamName.sort();
     return (
         <div className='sidebar'>
             <ul>

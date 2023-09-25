@@ -12,9 +12,8 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const res = await fetch("http://localhost:9999/posts", {cache:'no-cache'});
   const team = await res.json();
-const teamName=team.map((team)=>{
-  return team.team.name;
-})
+  const teamName=team.map((team)=>team.team.name);
+
   return (
     <html>
       <body>  
