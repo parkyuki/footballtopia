@@ -1,4 +1,6 @@
-import Sidebar from "./component/Sidebar"
+import '@/assets/scss/style.scss'
+import Sidebar from "../component/Sidebar"
+
 
 export const metadata = {
   title: 'Create Next App',

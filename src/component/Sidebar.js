@@ -4,7 +4,7 @@ import React from 'react';
 const Sidebar = ({teamName}) => {
 
     return (
-        <div>
+        <div className='sidebar'>
             <ul>
                 {teamName?.map((team,key)=>(
                     <li key={key}>{team}</li>
