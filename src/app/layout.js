@@ -1,5 +1,7 @@
 import '@/assets/scss/style.scss'
-import Sidebar from "../component/Sidebar"
+import Sidebar from "@/component/Sidebar"
+import Header from "@/component/Header"
+
 
 
 export const metadata = {
@@ -16,6 +18,7 @@ const teamName=team.map((team)=>{
   return (
     <html>
       <body>  
+        <Header/>
         <Sidebar teamName={teamName}/>
         {children}
         </body>

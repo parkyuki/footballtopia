@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+//setting
+@import "setting/mixin";
 
 //section
 @import "section/sidebar";
+@import "section/header";
