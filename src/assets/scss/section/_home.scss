@@ -5,5 +5,17 @@
     margin: 0 5%;
     background-color: #dadada;
     width: 60%;
-    height: 59vh;
+
+    & .teamTable{
+        margin: 0px;
+    }
+
+    & td {
+        margin:5px;
+
+        & img{
+        width: 10%;
+        height: auto;
+        }
+    }
 }
