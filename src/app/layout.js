@@ -20,7 +20,7 @@ export default async function RootLayout({ children }) {
         <Header/>
         <Sidebar teamName={teamName}/>
         {children}
-        </body>
+      </body>
     </html>
   )
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
 import Image from 'next/image';
+import Loading from '@/component/Loading';
 
 export default function Home() {
 
@@ -67,7 +68,7 @@ export default function Home() {
         </tr>
         ))}</div>
       ) : (
-        <p>Loading...</p>
+        <Loading/>
       )}
     </div>
   )
