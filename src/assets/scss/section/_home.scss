@@ -4,18 +4,32 @@
     display: inline-block;
     margin: 0 5%;
     background-color: #dadada;
-    width: 60%;
+    
+    & .table{
+        min-width: 560px;
+    }
 
-    & .teamTable{
-        margin: 0px;
+    & th{
+        white-space: nowrap;
+        padding: 1%;
+        width: 50px;
     }
 
     & td {
-        margin:5px;
+        padding: 4px 0;
+        text-align: center;
+        vertical-align: middle;
+        border-top: solid 1px #083966;
+    }
 
-        & img{
-        width: 10%;
-        height: auto;
+    .teamName{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & div{
+            padding-left: 10%;
         }
     }
 }
