@@ -6,11 +6,11 @@ const Loading = () => {
     return (
         <div className='loading'>
              <Image 
+                className='img'
                 src={logo}
                 alt="logo"
                 width={300}
                 height={300}
-                className='img'
              />
         </div>
     );
