@@ -12,13 +12,13 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const res = await fetch("http://localhost:9999/posts");
   const team = await res.json();
-  const teamName=team.map((team)=>team.team.name);
+  const teamInfo=team.map((team)=>team.team);
 
   return (
     <html>
       <body>  
         <Header/>
-        <Sidebar teamName={teamName}/>
+        <Sidebar teamInfo={teamInfo}/>
         {children}
       </body>
     </html>
