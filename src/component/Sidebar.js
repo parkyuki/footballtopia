@@ -11,7 +11,9 @@ const Sidebar = ({teamInfo}) => {
             <ul>
                 {sortedTeams?.map((team,key)=>(
                     <li key={key}>
-                        <Link href={`/board/${team.abbreviation}`}>{team.name}</Link>
+                        <Link href={`/board/${team.abbreviation}`}>
+                            {team.name}
+                        </Link>
                     </li>
                 ))}
             </ul>

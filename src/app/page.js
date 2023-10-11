@@ -63,7 +63,7 @@ export default function Home() {
                   </td>
                 <td>{team.stats.gamesPlayed}</td>
                 <td>{team.stats.wins}</td>
-                <td>{team.stats.gamesPlayed-team.stats.losses-team.stats.wins}</td>
+                <td>{team.stats.ties}</td>
                 <td>{team.stats.losses}</td>
                 <td>{team.stats.goalsFor}</td>
                 <td>{team.stats.goalDifference}</td>
