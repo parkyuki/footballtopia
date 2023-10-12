@@ -5,12 +5,12 @@ import logo from '@/assets/img/logo.png'
 const Loading = () => {
     return (
         <div className='loading'>
-             <Image 
+            <Image
                 src={logo}
                 alt="logo"
                 width={300}
                 height={300}
-             />
+            />
         </div>
     );
 };

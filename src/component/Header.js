@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className='header'>
             <Link href={"/"}>
-                <Image 
+                <Image
                     src={logo}
                     alt="logo"
                     width={300}
@@ -19,7 +19,7 @@ const Header = () => {
                     <button className='header-button'>login</button>
                 </Link>
                 <button className='header-button'>join</button>
-           </div>
+            </div>
         </div>
     );
 };

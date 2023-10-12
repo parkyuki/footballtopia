@@ -2,14 +2,14 @@ import Link from 'next/link';
 import React from 'react';
 
 
-const Sidebar = ({teamInfo}) => {
+const Sidebar = ({ teamInfo }) => {
 
     const sortedTeams = teamInfo.slice().sort((a, b) => a.name.localeCompare(b.name));
 
     return (
         <div className='sidebar'>
             <ul>
-                {sortedTeams?.map((team,key)=>(
+                {sortedTeams?.map((team, key) => (
                     <li key={key}>
                         <Link href={`/board/${team.abbreviation}`}>
                             {team.name}

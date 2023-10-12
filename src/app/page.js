@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Loading from '@/component/Loading';
 
@@ -14,12 +14,12 @@ export default function Home() {
         const res = await fetch("http://localhost:9999/posts");
         const result = await res.json();
         setData(result);
-       } catch (error) {
-          console.error('Error fetching data: ', error);
-         throw error;
-       }
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+        throw error;
+      }
     }
-     fetchData();
+    fetchData();
   }, []);
 
 
@@ -30,7 +30,7 @@ export default function Home() {
           <thead>
             <tr>
               <th>순위</th>
-              <th style={{width:'50%'}}>클럽</th>
+              <th style={{ width: '50%' }}>클럽</th>
               <th>경기</th>
               <th>승</th>
               <th>무</th>
@@ -42,25 +42,25 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {team.map((team,key)=>(
+            {team.map((team, key) => (
               <tr key={key}>
-                <td>{key+1}</td>
-                  <td>
-                    <div className='teamName'>
-                      <Image src={team.team.logo}
-                        alt="logo"
-                        width={500}
-                        height={500}
-                        style={{
-                          width: '20%',
-                          height: 'auto',
-                         }}
-                      />
-                       <div>
-                        {team.team.abbreviation}
-                       </div>
+                <td>{key + 1}</td>
+                <td>
+                  <div className='teamName'>
+                    <Image src={team.team.logo}
+                      alt="logo"
+                      width={500}
+                      height={500}
+                      style={{
+                        width: '20%',
+                        height: 'auto',
+                      }}
+                    />
+                    <div>
+                      {team.team.abbreviation}
                     </div>
-                  </td>
+                  </div>
+                </td>
                 <td>{team.stats.gamesPlayed}</td>
                 <td>{team.stats.wins}</td>
                 <td>{team.stats.ties}</td>
@@ -73,9 +73,9 @@ export default function Home() {
             ))}
           </tbody>
         </table>
-        ) : (
-          <Loading/>
-        )
+      ) : (
+        <Loading />
+      )
       }
     </div>
   )
