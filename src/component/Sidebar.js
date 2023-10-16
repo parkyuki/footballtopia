@@ -2,9 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 
 
-const Sidebar = ({ teamInfo }) => {
+const Sidebar = async () => {
+    const res = await fetch("http://localhost:9999/posts");
+    const team = await res.json();
+    const teamInfo = team.map((team) => team.team);
 
-    const sortedTeams = teamInfo.slice().sort((a, b) => a.name.localeCompare(b.name));
+    const sortedTeams = team.slice().sort((a, b) => a.name.localeCompare(b.name));
 
     return (
         <div className='sidebar'>
