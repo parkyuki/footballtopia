@@ -25,7 +25,7 @@ const page = async (props) => {
                     {teamInfo.team.name}
                 </div>
                 <div className='info'>
-                    {info.rank}위 {info.wins}승 {info.ties}무 {info.losses}패 {info.points}승점
+                    {info.rank}위 {info.wins}승 {info.ties}무 {info.losses}패 {info.points}승점 {info.goalsFor}
                 </div>
             </div>
 
