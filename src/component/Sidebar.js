@@ -7,7 +7,7 @@ const Sidebar = async () => {
     const team = await res.json();
     const teamInfo = team.map((team) => team.team);
 
-    const sortedTeams = team.slice().sort((a, b) => a.name.localeCompare(b.name));
+    const sortedTeams = teamInfo.slice().sort((a, b) => a.name.localeCompare(b.name));
 
     return (
         <div className='sidebar'>
