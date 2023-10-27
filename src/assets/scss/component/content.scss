@@ -5,34 +5,37 @@
     border-radius: 8px;
 
     .postform {
-        position: relative;
-        text-align: center;
 
-
-        textarea {
-            resize: none;
+        & .bar {
             width: 80%;
             height: 56px;
-            overflow-y: hidden;
-            padding: 1% 46px 1% 1%;
-            font-size: 18px;
-        }
+            margin: 0 auto;
+            position: relative;
 
-        button {
-            position: absolute;
-            border: none;
-            background: #003566;
-            width: 35px;
-            height: 34px;
-            border-radius: 9px;
-            right: 87px;
-            top: 10px;
-            cursor: pointer;
+            textarea {
+                resize: none;
+                width: 100%;
+                overflow-y: hidden;
+                padding: 1% 46px 1% 1%;
+                font-size: 18px;
+            }
 
-            svg {
-                width: 20px;
-                height: 20px;
-                color: white;
+            button {
+                position: absolute;
+                border: none;
+                background: #003566;
+                width: 35px;
+                height: 34px;
+                border-radius: 9px;
+                right: 1%;
+                top: 10px;
+                cursor: pointer;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    color: white;
+                }
             }
         }
     }
@@ -50,6 +53,7 @@
 
         & .empty {
             text-align: center;
+            padding-bottom: 2%;
         }
     }
 }

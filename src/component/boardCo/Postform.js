@@ -6,10 +6,12 @@ import React from 'react';
 export default function Postform() {
     return (
         <div className='postform'>
-            <textarea name="body" placeholder='body' />
-            <button type="submit">
-                <MdSend />
-            </button>
+            <div className='bar'>
+                <textarea name="body" placeholder='body' />
+                <button type="submit">
+                    <MdSend />
+                </button>
+            </div>
         </div>
     );
 }

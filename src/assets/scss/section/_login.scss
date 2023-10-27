@@ -13,14 +13,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 13px;
+        gap: 10%;
 
         & input {
             width: 300px;
             height: 40px;
-            padding: 12px 20px;
-            border: 1px solid rgb(133 158 182);
+            border: 2px solid rgb(56 97 136);
             border-radius: 99px;
+            text-align: center;
+            font-size: 15px;
         }
 
         & button {
@@ -31,17 +32,6 @@
             font-size: 14px;
             width: 30%;
             padding: 10px 20px;
-        }
-
-        & a {
-            border-radius: 6px;
-            color: white;
-            background: rgb(0 53 102);
-            height: 40px;
-            font-size: 14px;
-            padding: 10px 20px;
-            width: 30%;
-            text-align: center;
         }
     }
 }

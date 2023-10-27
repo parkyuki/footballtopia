@@ -1,17 +1,57 @@
-import React from 'react';
-import Link from 'next/link';
+"use client"
+import { useEffect, useState } from 'react';
 
-const page = () => {
+function Page() {
+    const [loginId, setLoginId] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const session = window.sessionStorage;
+        const storedLoginId = session.getItem("loginId");
+        if (storedLoginId) {
+            setLoginId(storedLoginId);
+            setIsLoggedIn(true);
+        }
+        setLoading(false);
+    }, []);
+
+    const handleLogin = () => {
+        const session = window.sessionStorage;
+        session.setItem("loginId", loginId);
+        setIsLoggedIn(true);
+    }
+
+    const handleLogout = () => {
+        const session = window.sessionStorage;
+        session.removeItem("loginId");
+        setIsLoggedIn(false);
+        setLoginId("");
+    }
+
     return (
         <div className='login'>
-            <div className='loginform'>
-                <input type="text" placeholder='아이디' name="id" />
-                <input type="password" placeholder='비밀번호' name="pw" />
-                <button>Login</button>
-                <Link href={"/join"}>Join</Link>
-            </div>
+            {loading ? (
+                <div>Loading...</div>
+            ) : isLoggedIn ? (
+                <div>
+                    <div>{loginId}님 환영합니다.</div>
+                    <button onClick={handleLogout}>로그아웃</button>
+                </div>
+            ) : (
+                <div className='loginform'>
+                    <input
+                        type="text"
+                        placeholder='닉네임'
+                        autoComplete='off'
+                        value={loginId}
+                        onChange={(e) => { setLoginId(e.target.value) }}
+                    />
+                    <button onClick={handleLogin}>Login</button>
+                </div>
+            )}
         </div>
     );
-};
+}
 
-export default page;
+export default Page;
