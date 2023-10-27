@@ -10,15 +10,20 @@ const Content = (props) => {
         <div className='content'>
             <Postform />
             <div className='postlist'>
-                {data?.map((topic) => (
-                    <div className='post' key={topic.topic.id}>
-                        <Link href={`${teamPath}/${topic.topic.id}`}>
-                            <div >{topic.topic.user}</div>
-                            <div>{topic.topic.date}</div>
-                            <div>{topic.topic.body}</div>
-                        </Link>
-                    </div>
-                ))}
+                {Array.isArray(data) ? (
+                    data.map((topic) => (
+                        <div className='post' key={topic.topic.id}>
+                            <Link href={`${teamPath}/${topic.topic.id}`}>
+                                <div>{topic.topic.user}</div>
+                                <div>{topic.topic.date}</div>
+                                <div>{topic.topic.body}</div>
+                            </Link>
+                        </div>
+                    ))
+                ) : (
+                    <div className='empty'>등록된 글이 없습니다.</div>
+                )}
+
             </div>
         </div>
     );
