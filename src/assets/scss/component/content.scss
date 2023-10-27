@@ -1,0 +1,51 @@
+.content {
+    margin: 30px 0;
+    padding: 20px 20px;
+    border: 1px solid #0000001f;
+    border-radius: 8px;
+
+    .postform {
+        position: relative;
+        text-align: center;
+
+
+        textarea {
+            resize: none;
+            width: 80%;
+            height: 56px;
+            overflow-y: hidden;
+            padding: 1% 46px 1% 1%;
+            font-size: 18px;
+        }
+
+        button {
+            position: absolute;
+            border: none;
+            background: #003566;
+            width: 35px;
+            height: 34px;
+            border-radius: 9px;
+            right: 87px;
+            top: 10px;
+            cursor: pointer;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+        }
+    }
+
+    .postlist {
+        margin-top: 10%;
+
+        & .post {
+            border: 1px solid #0000001f;
+            ;
+            border-radius: 8px;
+            margin-bottom: 2%;
+            padding: 1%;
+        }
+    }
+}

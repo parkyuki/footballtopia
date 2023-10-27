@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Content from '@/component/Content';
+import Content from '@/component/boardCo/Content';
 
 const page = async (props) => {
 
