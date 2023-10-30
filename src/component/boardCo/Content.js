@@ -3,20 +3,23 @@ import React from 'react';
 import Postform from './Postform';
 
 
-const Content = (props) => {
-    const { data, teamPath } = props;
-    console.log(teamPath);
+const Content = async ({ teamPath }) => {
+
+    const ress = await fetch(`http://localhost:9999/${teamPath}`, { cache: 'no-cache' });
+    const data = await ress.json();
+
+
     return (
         <div className='content'>
-            <Postform />
+            <Postform teamPath={teamPath} />
             <div className='postlist'>
                 {Array.isArray(data) ? (
-                    data.map((topic) => (
-                        <div className='post' key={topic.topic.id}>
-                            <Link href={`${teamPath}/${topic.topic.id}`}>
-                                <div>{topic.topic.user}</div>
-                                <div>{topic.topic.date}</div>
-                                <div>{topic.topic.body}</div>
+                    data.reverse().map((topic) => (
+                        <div className='post' key={topic.id}>
+                            <Link href={`${teamPath}/${topic.id}`}>
+                                <div>{topic.user}</div>
+                                <div>{topic.date}</div>
+                                <div>{topic.body}</div>
                             </Link>
                         </div>
                     ))

@@ -13,8 +13,6 @@ const page = async (props) => {
     const logo = teamInfo.team.logo;
     const info = teamInfo.stats;
 
-    const ress = await fetch(`http://localhost:9999/${teamPath}`);
-    const data = await ress.json();
 
     return (
         <div className='board'>
@@ -32,7 +30,7 @@ const page = async (props) => {
                     {info.rank}위 {info.wins}승 {info.ties}무 {info.losses}패 {info.points}승점 {info.goalsFor}
                 </div>
             </div>
-            <Content data={data} teamPath={teamPath} />
+            <Content teamPath={teamPath} />
         </div>
     );
 };
