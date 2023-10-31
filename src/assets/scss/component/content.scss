@@ -36,6 +36,11 @@
                     height: 20px;
                     color: white;
                 }
+
+                &:disabled {
+                    background-color: #ccc; // 비활성화된 버튼 배경색 (회색)
+                    cursor: not-allowed; // 커서를 not-allowed로 변경
+                }
             }
         }
     }
