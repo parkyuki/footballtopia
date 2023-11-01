@@ -1,11 +1,17 @@
 import React from 'react';
 
-const page = (props) => {
+const page = async (props) => {
     const { id, subid } = props.params;
-    console.log(id, subid)
+
+    const res = await fetch(`http://localhost:9999/${id}/${subid}`);
+    const data = await res.json();
+    console.log(props)
+
+
+
     return (
-        <div>
-            1111
+        <div className='comments'>
+            111
         </div>
     );
 };

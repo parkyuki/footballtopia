@@ -11,7 +11,7 @@ export default function Postform({ teamPath }) {
     const [login, setLogin] = useState(false)
 
 
-    const loginCheck = () => {
+    const Checklogin = () => {
         const session = window.sessionStorage;
         const id = session.getItem("loginId")
         id ? setLogin(true) : alert("로그인이 필요합니다.")
@@ -30,7 +30,7 @@ export default function Postform({ teamPath }) {
         <div className='postform'>
             <div className='bar'>
                 <textarea value={body} placeholder='메세지를 입력하세요'
-                    onClick={loginCheck}
+                    onClick={Checklogin}
                     onChange={(e) => { setBody(e.target.value) }} />
                 <button disabled={!login} onClick={handlePost} >
                     <MdSend />

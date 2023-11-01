@@ -15,7 +15,7 @@ const page = async (props) => {
 
 
     return (
-        <div className='board'>
+        <>
             <div className='team'>
                 <Image
                     src={logo}
@@ -31,7 +31,7 @@ const page = async (props) => {
                 </div>
             </div>
             <Content teamPath={teamPath} />
-        </div>
+        </>
     );
 };
 
