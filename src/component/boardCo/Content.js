@@ -15,10 +15,9 @@ const Content = async ({ teamPath }) => {
             <div className='postlist'>
                 {Array.isArray(data) ? (
                     data.reverse().map((topic) => (
-                        <div className='post' key={topic.id}>
+                        <div className='posts' key={topic.id}>
                             <Link href={{
                                 pathname: `${teamPath}/${topic.id}`,
-                                query: `${topic.user},${topic.date},${topic.body}`,
                             }}
                             >
                                 <div>{topic.user}</div>

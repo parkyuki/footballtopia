@@ -14,8 +14,8 @@ export default function Postform({ teamPath }) {
     const Checklogin = () => {
         const session = window.sessionStorage;
         const id = session.getItem("loginId")
-        id ? setLogin(true) : alert("로그인이 필요합니다.")
-
+        const noLogin = () => { alert("로그인이 필요합니다."), router.push('/login') }
+        id ? setLogin(true) : noLogin()
     }
     const handlePost = () => {
         const session = window.sessionStorage;

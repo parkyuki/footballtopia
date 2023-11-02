@@ -1,10 +1,12 @@
 "use client"
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 function Page() {
     const [loginId, setLoginId] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loading, setLoading] = useState(true);
+    const router = useRouter()
 
     useEffect(() => {
         const session = window.sessionStorage;
@@ -20,6 +22,7 @@ function Page() {
         const session = window.sessionStorage;
         session.setItem("loginId", loginId);
         setIsLoggedIn(true);
+        router.back();
     }
 
     const handleLogout = () => {

@@ -4,8 +4,24 @@
     border: 1px solid #0000001f;
     border-radius: 8px;
 
-    .postform {
+    .postlist {
+        margin-top: 10%;
 
+        & .posts {
+            border: 1px solid #0000001f;
+            ;
+            border-radius: 8px;
+            margin-bottom: 2%;
+            padding: 1%;
+        }
+
+        & .empty {
+            text-align: center;
+            padding-bottom: 2%;
+        }
+    }
+
+    .postform {
         & .bar {
             width: 80%;
             height: 56px;
@@ -45,20 +61,5 @@
         }
     }
 
-    .postlist {
-        margin-top: 10%;
 
-        & .post {
-            border: 1px solid #0000001f;
-            ;
-            border-radius: 8px;
-            margin-bottom: 2%;
-            padding: 1%;
-        }
-
-        & .empty {
-            text-align: center;
-            padding-bottom: 2%;
-        }
-    }
 }
