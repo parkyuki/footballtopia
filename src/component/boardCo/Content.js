@@ -11,7 +11,7 @@ const Content = async ({ teamPath }) => {
 
     return (
         <div className='content'>
-            <Postform teamPath={teamPath} />
+            <Postform id={teamPath} />
             <div className='postlist'>
                 {Array.isArray(data) ? (
                     data.reverse().map((topic) => (

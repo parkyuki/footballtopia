@@ -1,14 +1,16 @@
 import React from 'react';
 import { BsPersonCircle } from 'react-icons/bs';
-import { MdSend } from 'react-icons/md';
+import Postform from '@/component/boardCo/Postform';
 
 const page = async (props) => {
+
     const { id, subid } = props.params;
 
     const res = await fetch(`http://localhost:9999/${id}/${subid}`, { cache: 'no-cache' });
     const data = await res.json();
     const comments = data.comments;
-    console.log(comments)
+    console.log(comments[0])
+
 
 
     return (
@@ -25,15 +27,7 @@ const page = async (props) => {
                     {data.body}
                 </div>
             </div>
-            <div className='commentForm'>
-                <div className='bar'>
-                    <textarea placeholder='메세지를 입력하세요'
-                    />
-                    <button >
-                        <MdSend />
-                    </button>
-                </div>
-            </div>
+            <Postform id={props.params} comments={comments} />
             <section className='comments'>
                 {comments?.map((c, key) => (
                     <article key={key}>

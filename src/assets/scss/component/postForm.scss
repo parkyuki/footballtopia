@@ -1,0 +1,41 @@
+.postform {
+    margin: 3% 0;
+
+    & .bar {
+        width: 80%;
+        height: 56px;
+        margin: 0 auto;
+        position: relative;
+
+        textarea {
+            resize: none;
+            width: 100%;
+            overflow-y: hidden;
+            padding: 1% 46px 1% 1%;
+            font-size: 18px;
+        }
+
+        button {
+            position: absolute;
+            border: none;
+            background: #003566;
+            width: 35px;
+            height: 34px;
+            border-radius: 9px;
+            right: 1%;
+            top: 10px;
+            cursor: pointer;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+
+            &:disabled {
+                background-color: #ccc; // 비활성화된 버튼 배경색 (회색)
+                cursor: not-allowed; // 커서를 not-allowed로 변경
+            }
+        }
+    }
+}

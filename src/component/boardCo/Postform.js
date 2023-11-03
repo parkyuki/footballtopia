@@ -1,10 +1,11 @@
 "use client"
 import { MdSend } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
-import post from '@/app/apis/post';
+import { post, postComment } from '@/app/apis/post';
 import React, { useState } from 'react';
 
-export default function Postform({ teamPath }) {
+export default function Postform({ id, comments }) {
+    console.log("sssid:" + id.subid);
     const router = useRouter()
     const [body, setBody] = useState("")
     const [date, setDate] = useState(new Date().toLocaleDateString())
@@ -21,7 +22,8 @@ export default function Postform({ teamPath }) {
         const session = window.sessionStorage;
         const user = session.getItem("loginId")
         setDate(new Date().toLocaleDateString());
-        post(user, date, body, teamPath);
+        id.subid ? postComment(comments, user, date, body, id.id, id.subid) :
+            post(user, date, body, id);
         router.refresh();
         setBody("")
     }
