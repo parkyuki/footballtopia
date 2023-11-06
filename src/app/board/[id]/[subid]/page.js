@@ -6,7 +6,7 @@ const page = async (props) => {
 
     const { id, subid } = props.params;
 
-    const res = await fetch(`http://localhost:9999/${id}/${subid}`, { cache: 'no-cache' });
+    const res = await fetch(`https://shy-imported-dime.glitch.me/${id}/${subid}`, { cache: 'no-cache' });
     const data = await res.json();
     const comments = data.comments;
 

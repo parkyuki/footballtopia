@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const Sidebar = async () => {
-    const res = await fetch("http://localhost:9999/posts");
+    const res = await fetch("https://shy-imported-dime.glitch.me/posts");
     const team = await res.json();
     const teamInfo = team.map((team) => team.team);
     const sortedTeams = teamInfo.slice().sort((a, b) => a.name.localeCompare(b.name));

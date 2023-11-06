@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default async function Home() {
 
-  const res = await fetch("http://localhost:9999/posts", { cache: 'no-store' });
+  const res = await fetch("https://shy-imported-dime.glitch.me/posts", { cache: 'no-store' });
   const team = await res.json();
 
   return (

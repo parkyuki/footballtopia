@@ -7,7 +7,7 @@ const page = async (props) => {
     //클릭한 팀
     const teamPath = props.params.id;
     //클릭한 팀 찾아서 데이터 불러오기 
-    const res = await fetch("http://localhost:9999/posts");
+    const res = await fetch("https://shy-imported-dime.glitch.me/posts");
     const team = await res.json();
     const teamInfo = team.find((team) => team.team.abbreviation === teamPath);
     const logo = teamInfo.team.logo;

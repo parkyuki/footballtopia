@@ -7,7 +7,7 @@ import { BsPersonCircle } from 'react-icons/bs';
 
 const Content = async ({ teamPath }) => {
 
-    const ress = await fetch(`http://localhost:9999/${teamPath}`, { cache: 'no-cache' });
+    const ress = await fetch(`https://shy-imported-dime.glitch.me/${teamPath}`, { cache: 'no-cache' });
     const data = await ress.json();
 
 

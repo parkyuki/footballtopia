@@ -2,7 +2,7 @@ import React from 'react';
 
 export const post = async (user, date, body, teamPath) => {
     try {
-        const res = await fetch(`http://localhost:9999/${teamPath}`, {
+        const res = await fetch(`https://shy-imported-dime.glitch.me/${teamPath}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ export const post = async (user, date, body, teamPath) => {
 };
 export const postComment = async (comments, user, date, body, id, subid) => {
     try {
-        const res = await fetch(`http://localhost:9999/${id}/${subid}`, {
+        const res = await fetch(`https://shy-imported-dime.glitch.me/${id}/${subid}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
