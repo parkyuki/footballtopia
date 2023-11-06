@@ -23,17 +23,17 @@ export const post = async (user, date, body, teamPath) => {
 export const postComment = async (comments, user, date, body, id, subid) => {
     try {
         const res = await fetch(`http://localhost:9999/${id}/${subid}`, {
-            method: 'POST',
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ comments: [...comments, { user, date, body }] })
+            body: JSON.stringify({ comments: [...comments, { user: user, date: date, body: body }] })
         });
 
         if (res.ok) {
             console.log("comment 성공")
         } else {
-            console.error("post 실패" + { user, date, body }, id, subid)
+            console.error(...comments, { user: user, date: date, body: body })
         }
 
     } catch (error) {

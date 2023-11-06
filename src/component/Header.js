@@ -1,11 +1,31 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react';
 import React from 'react';
 import Image from 'next/image';
 import logo from '@/assets/img/logo.png'
 import Link from 'next/link';
 
 const Header = () => {
+    const [loginId, setLoginId] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const session = window.sessionStorage;
+        const storedLoginId = session.getItem("loginId");
+        if (storedLoginId) {
+            setIsLoggedIn(true);
+            setLoginId(storedLoginId)
+        }
+    }, []);
+
+    const handleLogout = () => {
+        const session = window.sessionStorage;
+        session.removeItem("loginId");
+        setIsLoggedIn(false);
+        setLoginId("");
+    }
+
     const router = useRouter();
     const onClickHandle = () => {
         router.push('/');
@@ -17,15 +37,24 @@ const Header = () => {
                 <Image
                     src={logo}
                     alt="logo"
-                    width={300}
-                    height={300}
+                    width={200}
+                    height={200}
+                    loading='eager'
                 />
             </div>
             <div>
-                <Link href={"/login"}>
-                    <button className='header-button'>login</button>
-                </Link>
-                <button className='header-button'>join</button>
+                {isLoggedIn ?
+                    <div>
+                        {loginId}님
+                        <button
+                            className='logout'
+                            onClick={handleLogout}>logout</button>
+                    </div>
+                    :
+                    <Link href={"/login"}>
+                        <button className='header-button'>login</button>
+                    </Link>
+                }
             </div>
         </div>
     );

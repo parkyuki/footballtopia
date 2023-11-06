@@ -5,7 +5,7 @@ import { post, postComment } from '@/app/apis/post';
 import React, { useState } from 'react';
 
 export default function Postform({ id, comments }) {
-    console.log("sssid:" + id.subid);
+
     const router = useRouter()
     const [body, setBody] = useState("")
     const [date, setDate] = useState(new Date().toLocaleDateString())

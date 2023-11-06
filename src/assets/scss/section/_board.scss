@@ -32,33 +32,13 @@
         }
     }
 
+
     //[subid]
     .post {
         border: 1px solid;
 
-        .info {
-            display: flex;
-            gap: 15px;
 
-            & svg {
-                height: 30px;
-                width: auto;
-                color: #a7a7a7;
-                background-color: #e1e1e19c;
-                border-radius: 15px;
-            }
 
-            .user {
-                & .date {
-                    font-size: 14px;
-                    color: #a7a7a7;
-                }
-            }
-        }
-
-        .body {
-            padding: 3%;
-        }
 
         & .topic {
             padding: 3% 0 0 3%;
@@ -67,10 +47,40 @@
         & .comments {
             margin: 3%;
 
-            article {
-                margin-bottom: 2%;
-                padding: 1%;
-                background-color: #a7a7a736;
+
+        }
+    }
+
+
+
+    article {
+        border: 1px solid rgba(0, 0, 0, 0.1215686275);
+        border-radius: 8px;
+        margin-bottom: 2%;
+        padding: 2%;
+        background-color: #a7a7a736;
+
+        .body {
+            padding: 3%;
+        }
+    }
+
+    .info {
+        display: flex;
+        gap: 15px;
+
+        & svg {
+            height: 30px;
+            width: auto;
+            color: #a7a7a7;
+            background-color: #e1e1e19c;
+            border-radius: 15px;
+        }
+
+        .user {
+            & .date {
+                font-size: 14px;
+                color: #a7a7a7;
             }
         }
     }

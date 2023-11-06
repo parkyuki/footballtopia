@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import Postform from './Postform';
+import { BsPersonCircle } from 'react-icons/bs';
+
 
 
 const Content = async ({ teamPath }) => {
@@ -12,25 +14,33 @@ const Content = async ({ teamPath }) => {
     return (
         <div className='content'>
             <Postform id={teamPath} />
-            <div className='postlist'>
-                {Array.isArray(data) ? (
+            <section className='postlist'>
+                {data && data.length > 0 ? (
                     data.reverse().map((topic) => (
-                        <div className='posts' key={topic.id}>
+                        <article className='posts' key={topic.key}>
                             <Link href={{
                                 pathname: `${teamPath}/${topic.id}`,
                             }}
                             >
-                                <div>{topic.user}</div>
-                                <div>{topic.date}</div>
-                                <div>{topic.body}</div>
+                                <div className='info'>
+                                    <BsPersonCircle />
+                                    <div className='user'>
+                                        <h4>{topic.user}</h4>
+                                        <div className='date'>{topic.date}</div>
+                                    </div>
+                                </div>
+                                <div className='body'>
+                                    {topic.body}
+                                </div>
                             </Link>
-                        </div>
+                        </article>
+
                     ))
                 ) : (
                     <div className='empty'>등록된 글이 없습니다.</div>
                 )}
 
-            </div>
+            </section>
         </div>
     );
 

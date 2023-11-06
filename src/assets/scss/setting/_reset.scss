@@ -46,8 +46,10 @@ select,
 table,
 textarea,
 ul,
-li {
+li,
+h3 {
     font-family: "ubuntu";
+    font-weight: 550;
 }
 
 // 링크 초기화

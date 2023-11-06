@@ -7,21 +7,9 @@
     .postlist {
         margin-top: 10%;
 
-        & .posts {
-            border: 1px solid #0000001f;
-            ;
-            border-radius: 8px;
-            margin-bottom: 2%;
-            padding: 1%;
-        }
-
         & .empty {
             text-align: center;
             padding-bottom: 2%;
         }
     }
-
-
-
-
 }
