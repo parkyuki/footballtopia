@@ -5,14 +5,21 @@
 
   @media(max-width:650px) {
     padding: 10px 20px 0 20px;
+
+
   }
 
   /* 로고 스타일 */
   & img {
-    width: 188px;
-    height: auto;
-    cursor: pointer;
+    @media(max-width:650px) {
 
+      width: 120px;
+      height: auto;
+
+    }
+
+
+    cursor: pointer;
   }
 
   /* 로그인 및 회원가입 버튼 스타일 */

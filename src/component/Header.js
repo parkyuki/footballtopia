@@ -40,6 +40,8 @@ const Header = () => {
                     width={200}
                     height={200}
                     loading='eager'
+                    priority="high"
+
                 />
             </div>
             <div>

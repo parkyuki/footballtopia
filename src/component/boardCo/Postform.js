@@ -24,8 +24,8 @@ export default function Postform({ id, comments }) {
         setDate(new Date().toLocaleDateString());
         id.subid ? postComment(comments, user, date, body, id.id, id.subid) :
             post(user, date, body, id);
-        router.refresh()
-        setBody("")
+        setBody("");
+        router.refresh();
     }
 
     return (
