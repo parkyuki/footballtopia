@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-
+import Image from 'next/image';
 
 const Sidebar = async () => {
     const res = await fetch("https://shy-imported-dime.glitch.me/posts");
@@ -14,7 +14,12 @@ const Sidebar = async () => {
                 {sortedTeams?.map((team, key) => (
                     <li key={key}>
                         <Link href={`/board/${team.abbreviation}`}>
-                            {team.name}
+                            <Image src={team.logo}
+                                alt="logo"
+                                width={500}
+                                height={500}
+                            />
+                            <div className='text'>{team.name}</div>
                         </Link>
                     </li>
                 ))}

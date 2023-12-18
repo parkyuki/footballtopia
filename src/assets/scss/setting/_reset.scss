@@ -11,9 +11,7 @@ body {
     @media (max-width: 650px) {
         width: 100vw;
 
-        .sidebar {
-            display: none;
-        }
+
     }
 }
 
@@ -93,10 +91,7 @@ strong {
     font-weight: normal;
 }
 
-img {
-    vertical-align: top;
-    width: 100%;
-}
+img {}
 
 // 스킵메뉴
 #skip a {

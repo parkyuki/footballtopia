@@ -1,10 +1,35 @@
 .login {
+
+    @media screen and (max-width:650px) {
+        width: 330px;
+        height: 190px;
+    }
+
     position: absolute;
     display: inline-block;
-    margin: 2% 20%;
+    margin: 2% 15%;
     border: 3px solid #003566c7;
-    width: 500px;
-    height: 300px;
+    width: 450px;
+    height: 250px;
+
+    .user {
+
+        text-align: center;
+        margin: 15%;
+
+        button {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 7px;
+            margin-left: 10px;
+            background-color: #003566;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 15px;
+        }
+    }
 
     .loginform {
         width: 100%;

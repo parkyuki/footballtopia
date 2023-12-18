@@ -37,7 +37,7 @@ function Page() {
             {loading ? (
                 <div>Loading...</div>
             ) : isLoggedIn ? (
-                <div>
+                <div className='user'>
                     <div>{loginId}님 환영합니다.</div>
                     <button onClick={handleLogout}>로그아웃</button>
                 </div>

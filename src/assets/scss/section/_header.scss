@@ -1,8 +1,11 @@
 .header {
   @include flex-between;
   padding: 10px 20px;
-  /* 안쪽 여백 설정 */
   align-items: flex-start;
+
+  @media(max-width:650px) {
+    padding: 10px 20px 0 20px;
+  }
 
   /* 로고 스타일 */
   & img {
