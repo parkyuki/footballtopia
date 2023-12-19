@@ -12,7 +12,7 @@ export default async function Home() {
         <thead>
           <tr>
             <th>순위</th>
-            <th style={{ width: '50%' }}>클럽</th>
+            <th className='club'>클럽</th>
             <th>경기</th>
             <th>승</th>
             <th>무</th>

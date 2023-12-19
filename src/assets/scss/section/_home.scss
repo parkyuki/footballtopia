@@ -1,11 +1,21 @@
 .home {
+    @media screen and (max-width:650px) {
+        .club {
+            width: 40%;
+        }
+
+    }
+
     position: absolute;
     display: inline-block;
     margin: 0 5%;
 
+    .club {
+        width: 50%;
+    }
 
     & .table {
-        min-width: 500px;
+        min-width: 390px;
         background-color: #dadada;
         border-collapse: collapse;
     }
@@ -13,7 +23,6 @@
     & th {
         white-space: nowrap;
         padding: 1%;
-        width: 50px;
         font-size: 0.8em;
     }
 
